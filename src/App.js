@@ -7,16 +7,14 @@ class App extends React.Component {
     timesClicked: 0
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState({ timesClicked: this.state.timesClicked + 1 })
   }
 
   render() {
-    const { timesClicked } = this.state
-
     return (
       <>
-        <p>You've clicked it {timesClicked} times</p>
+        <p>You've clicked it {this.state.timesClicked} times</p>
         <button onClick={this.handleClick}>click me!</button>
       </>
     )
